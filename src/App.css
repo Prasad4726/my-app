@@ -174,23 +174,9 @@ body {
 }
 
 @media only screen and (max-width: 565px) {
-
-  .back-button,
-  .toggle-button {
-    display: none;
-  }
-
-  .product-container {
-    grid-template-columns: 1fr;
-  }
-
   .product-info h1 {
     font-size: 1rem;
     margin-top: 0;
-  }
-
-  .product-img {
-    order: -1;
   }
 
   .cta {
@@ -199,6 +185,25 @@ body {
   }
   
 }
+
+@media screen and (max-width: 768px) {
+  .product-container {
+    flex-direction: column
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .product-img {
+    order: -1;
+  }
+
+  .back-button, .toggle-button {
+    display: none;
+  }
+}
+
 .full-image{
   grid-column: 1/-1;
   height: 100vh;
