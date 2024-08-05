@@ -82,11 +82,19 @@ function App() {
                 </div>
                 <div className="product-description">
                   <h2>Description:</h2>
-                  <motion.p>Maitreya, the future Buddha to be, resides in the Tushita heaven as a bodhisattva waiting to
-                    redeem humanity. In Buddhism, Maitreya is the eighth Buddha, a successor of the seven historical
-                    Buddhas (sapta-manushi Buddhas). The Digha Nikaya mentions, Maitreya Buddha will be born in
-                    Ketumati, in present-day Varanasi, Uttar Pradesh. As a bodhisattva, Maitreya wears a heavily
-                    adorned with earrings, wristlets, necklaces, and an amulet.</motion.p>
+                  <motion.p>
+                    {showFullDescription ? (
+                      <>Maitreya, the future Buddha to be, resides in the Tushita heaven as a bodhisattva waiting to
+                        redeem humanity. In Buddhism, Maitreya is the eighth Buddha, a successor of the seven historical
+                        Buddhas (sapta-manushi Buddhas). The Digha Nikaya mentions, Maitreya Buddha will be born in
+                        Ketumati, in present-day Varanasi, Uttar Pradesh. As a bodhisattva, Maitreya wears a heavily
+                        adorned with earrings, wristlets, necklaces, and an amulet.</>
+                      ) : (
+                      <>Maitreya, the future Buddha to be, resides in the Tushita heaven as a bodhisattva waiting to
+                        redeem humanity. In Buddhism, Maitreya is the eighth Buddha, a successor of the seven historical
+                        Buddhas (sapta-manushi Buddhas). The Digha Nikaya mentions...</>
+                      )}
+                  </motion.p>
                 </div>
                 <button className="read-more" onClick={toggleDescription}><i className="ri-arrow-right-line"></i> {showFullDescription ? 'Read Less' : 'Read More'}</button>
                 <div className="cta-buttons">
